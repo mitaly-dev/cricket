@@ -1,0 +1,49 @@
+.field {
+  width: 90%;
+  height: 90vh;
+  border: 3px solid black;
+  margin: auto;
+  background-color: green;
+  overflow: hidden;
+  position: relative;
+}
+.bat {
+  width: 30%;
+  position: absolute;
+  bottom: 0;
+  left: -8%;
+  transform: rotate(-46deg);
+  transform-origin: top;
+  animation: bat1 1s ease-in;
+  animation-play-state: running;
+}
+.ball {
+  width: 5%;
+  position: absolute;
+  top: 210px;
+  left: 79%;
+  transform: translateX(280px);
+  animation: ball 2s ease-out;
+  animation-play-state: running;
+}
+@keyframes ball {
+  0% {
+    top: 210px;
+  }
+  50% {
+    left: 0;
+    top: 85%;
+  }
+  100% {
+    left: 100%;
+    top: 10%;
+  }
+}
+@keyframes bat1 {
+  50% {
+    transform: rotate(-15deg);
+  }
+  100% {
+    transform: rotate(-60deg);
+  }
+}
